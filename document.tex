@@ -1,0 +1,87 @@
+\documentclass[a4paper, 10pt, legalpaper]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Configuración del Encabezado
+\newcommand{\class}{}
+\newcommand{\term}{Métodos Numéricos I}
+\newcommand{\examnum}{Primer Examen Parcial}
+\newcommand{\examdate}{Fecha:23 de octubre de 2024}
+\newcommand{\timelimit}{80 minutos}
+\pagestyle{head}
+\firstpageheader{Escuela Superior de Física y Matemáticas}{}{Instituto Politécnico Nacional}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+% Configuración de la tabla de calificación
+\pointpoints{punto}{puntos}
+\hpword{Puntos:}
+\vpword{Puntos}
+\vtword{Total:}
+\htword{Total}
+\vsword{Resultado}
+\hsword{Resultado:}
+\vqword{Problema}
+\hqword{Pregunta:}
+
+\begin{document}
+	% Definición del Encabezado
+	\noindent
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+		\textbf{\class} & \textbf{Nombre:} & \makebox[2.5in]{\hrulefill}\\
+		\textbf{\term} &&\\
+		\textbf{\examnum} & \textbf{Escala} & \makebox[2.5in]{\hrulefill}\\
+		\textbf{\examdate} &&\\
+		\textbf{Tiempo: \timelimit} %& Profesor: & \makebox[2.5in]{\emph{Dr. John Doe}}
+	\end{tabular*}\\
+	\rule[2ex]{\textwidth}{2pt}
+	
+	% Bloque de instrucciones
+	\noindent
+	Este examen contiene \numquestions \;ejercicios que corresponden a \numpoints \;puntos de la primera calificación parcial del curso. Para la calificación de cada ejercicio se consideran los siguientes valores: Planteamineto correcto: 25\%; Desarrollo correcto: 50 \%; Solución correcta (incluye uso correcto de la aproximación): 25\%.
+	
+	% Tabla de calificaciones
+	\begin{center}
+		Tabla de calificación de uso exclusivo para el profesor. \\
+		\addpoints
+		% Puede presentar la tabla de calificación en orientación vertical [v] u horizontal [h]
+		\gradetable[h][questions]
+	\end{center}
+	
+	% Preguntas de ejemplo.
+	\begin{questions}
+		
+		\addpoints
+		\question[05] Demuestre que la ecuación $x - (lnx)^x = 0$ tiene al menos una solución en el intervalo $[4,5]$.
+		
+		\addpoints
+		\question[05] Demuestre que la primera derivada de la función $ f (x)=1-e^x+(e-1)$ sen $ ((\pi / 2)x)$ se anula al menos una vez en el intervalo $[0,1]$.
+		
+		
+		\addpoints
+		\question[10] Sea $f(x)=(x+2)(x+1)x(x-1)^3(x-2)$. ¿En cuál cero de $f$ converge el método de bisección en el intervalo [-3.0, 2.5]?
+		
+		\addpoints
+		\question[10] Aplique el método de iteración de punto fijo para determinar una solución con una exactitud de $10^{-2}$ para $x^3-x-1=0$ en $[1,2]$. Utilice $p_0=1$.
+		
+		\addpoints
+		\question[10] Aplique el método de Newton para obtener una solución con una exactitud de $10^{-4}$ para $x - cosx = 0$ en $[0,\pi/2]$.
+		
+		\addpoints
+		\question[20] Obtenga las aproximaciones, con una exactitud de $10^{-4}$ a todos los ceros del polinomio $P(x) = x^3 - 2x^2-5$ usando el método de Newton.
+		
+		
+	\end{questions}
+	
+	\noindent
+	\rule[2ex]{\textwidth}{2pt}
+	\begin{center}
+		\textbf{Soluci\'on}
+	\end{center}
+	
+\end{document}
